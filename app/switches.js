@@ -10,53 +10,25 @@ function daysPosition(day, offset) {
     let out = 0;
     switch (day) {
         case 'sunday':
-            if (offset == true) {
-                out = 7;
-            } else {
-                out = 1;
-            }
+            offset == true ? out = 7 : out = 1;
             break;
         case 'monday':
-            if (offset == true) {
-                out = 1;
-            } else {
-                out = 2;
-            }
+            offset == true ? out = 1 : out = 2;
             break;
         case 'tuesday':
-            if (offset == true) {
-                out = 2;
-            } else {
-                out = 3;
-            }
+            offset == true ? out = 2 : out = 3;
             break;
         case 'wednesday':
-            if (offset == true) {
-                out = 3;
-            } else {
-                out = 4;
-            }
+            offset == true ? out = 3 : out = 4;
             break;
         case 'thursday':
-            if (offset == true) {
-                out = 4;
-            } else {
-                out = 5;
-            }
+            offset == true ? out = 4 : out = 5;
             break;
         case 'friday':
-            if (offset == true) {
-                out = 5;
-            } else {
-                out = 6;
-            }
+            offset == true ? out = 5 : out = 6;
             break;
         case 'saturday':
-            if (offset == true) {
-                out = 6;
-            } else {
-                out = 7;
-            }
+            offset == true ? out = 6 : out = 7;
             break;
         default:
             out = "That's not a day of the week";
@@ -82,7 +54,7 @@ function daysPosition(day, offset) {
  */
 
 function golfScore(score, par) {
-    let result = "";
+    if (score == 1) { return "Ace" };
     let lowScore;
     let highScore;
 
@@ -96,30 +68,21 @@ function golfScore(score, par) {
     switch (scoreBoard) {
         case highScore:
         case -3:
-            result = "Ace";
-            break;
+            return "Ace";
         case -2:
-            result = "Eagle";
-            break;
+            return "Eagle";
         case -1:
-            result = "Birdie";
-            break;
+            return "Birdie";
         case 0:
-            result = "Par";
-            break;
+            return "Par";
         case 1:
-            result = "Bogie";
-            break;
+            return "Bogie";
         case 2:
-            result = "Double Bogie";
-            break;
+            return "Double Bogie";
         case 3:
         case lowScore:
-            result = "Ouch";
-            break;
+            return "Ouch";
     }
-
-    return result;
 }
 
 
