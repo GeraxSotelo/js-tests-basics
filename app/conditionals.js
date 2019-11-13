@@ -84,5 +84,5 @@ let dish = {
 }
 
 function washDish(dish) {
-    return dish.yourDish == true && dish.isDirty == true;
+    return dish.yourDish && dish.isDirty;
 }
